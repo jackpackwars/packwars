@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pack Wars — Official Rules</title>
+  <style>
+    :root {
+      --bg: #f0f0f0;
+      --surface: #ffffff;
+      --border: #ccd8ea;
+      --blue: #1a4f8c;
+      --blue-dim: #3a72c0;
+      --blue-light: #ddeaf8;
+      --blue-tag-text: #1a4f8c;
+      --text: #111827;
+      --text-muted: #5a6778;
+      --drawer-bg: #f4f8fd;
+      --radius: 10px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: sans-serif;
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+
+    header {
+      background: var(--surface);
+      border-bottom: 2px solid var(--blue);
+      padding: 0.15rem 0.5rem;
+      display: flex;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 20;
+    }
+
+    header h1 {
+      font-size: 1rem;
+      color: var(--blue);
+      letter-spacing: 0.03em;
+    }
+
+    header .logo {
+      height: 80px;
+      width: auto;
+    }
+
+    header .tagline {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      margin-left: 0.5rem;
+    }
+
+    main {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 1rem 0.75rem 2rem;
+    }
+
+    /* Rule card */
+    .rule {
+      background: var(--surface);
+      border: 0.5px solid var(--border);
+      border-left: 3px solid var(--blue-dim);
+      border-radius: var(--radius);
+      margin-bottom: 0.85rem;
+      scroll-margin-top: 1rem;
+      overflow: hidden;
+    }
+
+    .rule-body {
+      padding: 0.7rem 0.9rem;
+    }
+
+    .rule h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 0.3rem;
+    }
+
+    .rule p {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    .rule .note {
+      margin-top: 0.75rem;
+      padding: 0.6rem 0.9rem;
+      background: var(--drawer-bg);
+      border-left: 3px solid var(--blue-dim);
+      color: var(--text-muted);
+      font-size: 0.875rem;
+      font-style: italic;
+      border-radius: 0 4px 4px 0;
+    }
+
+    /* Drawer */
+    .drawer {
+      border-top: 0.5px solid var(--border);
+    }
+
+    .drawer summary {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      padding: 0.4rem 0.9rem;
+      font-size: 0.78rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      cursor: pointer;
+      user-select: none;
+      background: var(--drawer-bg);
+      transition: background 0.15s;
+    }
+
+    .drawer summary::-webkit-details-marker { display: none; }
+
+    .drawer summary:hover {
+      background: var(--blue-light);
+      color: var(--blue);
+    }
+
+    .drawer summary .chevron {
+      margin-left: auto;
+      font-size: 0.65rem;
+      transition: transform 0.2s;
+    }
+
+    .drawer[open] summary .chevron {
+      transform: rotate(180deg);
+    }
+
+    .drawer-content {
+      padding: 0.6rem 0.9rem 0.7rem;
+      background: var(--drawer-bg);
+      border-top: 0.5px solid var(--border);
+    }
+
+    .faq-item {
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
+    }
+
+    .faq-item + .faq-item {
+      margin-top: 0.85rem;
+      padding-top: 0.85rem;
+      border-top: 0.5px solid var(--border);
+    }
+
+    .faq-q {
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .faq-a {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+    }
+
+    /* Overview box */
+    .overview {
+      background: var(--surface);
+      border: 0.5px solid var(--border);
+      border-radius: var(--radius);
+      padding: 0.7rem 0.9rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .overview h2 {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--blue-dim);
+      margin-bottom: 0.4rem;
+    }
+
+    .overview p {
+      font-size: 0.95rem;
+      color: var(--text);
+    }
+
+    /* Section header */
+    .section-header {
+      margin: 1.25rem 0 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      position: sticky;
+      top: var(--header-height, 0px);
+      z-index: 10;
+      background: var(--bg);
+      padding: 0.4rem 0;
+    }
+
+    .section-header h2 {
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text);
+      white-space: nowrap;
+    }
+
+    .section-header::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      color: var(--text-muted);
+      font-size: 0.8rem;
+      border-top: 0.5px solid var(--border);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="logo.png" alt="Pack Wars" class="logo">
+    <span class="tagline">The One True Format</span>
+  </header>
+
+  <main>
+
+    <div class="overview">
+      <h2>Overview</h2>
+      <p>Add a quick overview of the Pack Wars format here — what it is, how it plays, and what makes it fun.</p>
+    </div>
+
+    <div class="section-header"><h2>Setup</h2></div>
+
+    <section class="rule" id="pack-selection">
+      <div class="rule-body">
+        <h3>Pack Selection</h3>
+        <p>Each player brings one unopened booster pack of their choice. All packs are opened simultaneously at the start of the game. Players may not look at their pack contents before the game begins.</p>
+      </div>
+      <details class="drawer">
+        <summary>FAQ <span class="chevron">▼</span></summary>
+        <div class="drawer-content">
+          <div class="faq-item">
+            <span class="faq-q">Can players agree to use the same set?</span>
+            <span class="faq-a">Yes — if the group agrees beforehand, everyone can use packs from the same set. Otherwise any pack goes.</span>
+          </div>
+        </div>
+      </details>
+    </section>
+
+    <div class="section-header"><h2>Lands</h2></div>
+
+    <section class="rule" id="land-drops">
+      <div class="rule-body">
+        <h3>Land Drops</h3>
+        <p>Because there are no basic lands in players' decks, whenever a player could play a land they may instead <strong>super-exile</strong> a card from their hand to put a basic land of their choice directly into play.</p>
+        <p class="note">Super-exile is a permanent exile — absolutely no effects, abilities, or spells can interact with or retrieve cards in super-exile.</p>
+      </div>
+      <details class="drawer">
+        <summary>FAQ <span class="chevron">▼</span></summary>
+        <div class="drawer-content">
+          <div class="faq-item">
+            <span class="faq-q">Do I have to pitch a card to play a land?</span>
+            <span class="faq-a">No — it's optional, just like playing a land normally. You may pitch one card per turn in place of a land drop.</span>
+          </div>
+        </div>
+      </details>
+    </section>
+
+    <div class="section-header"><h2>The Big 3</h2></div>
+
+    <section class="rule" id="attack-left">
+      <div class="rule-body">
+        <h3>Attack Left</h3>
+        <p>Players may only attack the player directly to their left with creatures. However, spells and abilities may target any creature or player in the game.</p>
+      </div>
+      <details class="drawer">
+        <summary>FAQ <span class="chevron">▼</span></summary>
+        <div class="drawer-content">
+          <div class="faq-item">
+            <span class="faq-q">Can I use a spell to deal damage to a player on the other side of the table?</span>
+            <span class="faq-a">Yes — the Attack Left rule only restricts creature attacks. Spells and abilities can target anyone.</span>
+          </div>
+        </div>
+      </details>
+    </section>
+
+    <section class="rule" id="global-effects">
+      <div class="rule-body">
+        <h3>Global Effects</h3>
+        <p>Any effect that uses the words "any," "all," or similar broad language only affects you and the players immediately to your left and right — not the full table.</p>
+        <p class="note">This prevents mechanics like Extort from becoming overwhelming and stops Wrath effects from completely stalling the game across all players.</p>
+      </div>
+      <details class="drawer">
+        <summary>FAQ <span class="chevron">▼</span></summary>
+        <div class="drawer-content">
+          <div class="faq-item">
+            <span class="faq-q">Does a Wrath of God destroy creatures controlled by players across the table?</span>
+            <span class="faq-a">No — it only destroys creatures controlled by you and the players directly to your left and right.</span>
+          </div>
+        </div>
+      </details>
+    </section>
+
+    <section class="rule" id="go-with-it">
+      <div class="rule-body">
+        <h3>Go With It</h3>
+        <p>Some cards and sets simply aren't Pack Wars friendly. If a card doesn't fit the format or completely breaks it (such as cards that care about the number of lands in your graveyard), it should be an easy choice to use that card as your land pitch instead of playing it.</p>
+      </div>
+      <details class="drawer">
+        <summary>FAQ <span class="chevron">▼</span></summary>
+        <div class="drawer-content">
+          <div class="faq-item">
+            <span class="faq-q">Who decides if a card breaks the format?</span>
+            <span class="faq-a">The group does — if the table agrees a card is too disruptive, pitch it for a land. When in doubt, Go With It.</span>
+          </div>
+        </div>
+      </details>
+    </section>
+
+    <div class="section-header"><h2>Winning</h2></div>
+
+    <section class="rule" id="priority">
+      <div class="rule-body">
+        <h3>Priority</h3>
+        <p>As a reminder: the active player starts with priority, which is then passed clockwise to each player. This is important for timing interactions such as sniping kills during combat.</p>
+      </div>
+      <details class="drawer">
+        <summary>FAQ <span class="chevron">▼</span></summary>
+        <div class="drawer-content">
+          <div class="faq-item">
+            <span class="faq-q">Can I cast an instant to finish off a player during someone else's combat?</span>
+            <span class="faq-a">Yes — once priority reaches you, you can cast instants or activate abilities, including ones that deal damage to players.</span>
+          </div>
+        </div>
+      </details>
+    </section>
+
+    <div class="section-header"><h2>Other Core Rules</h2></div>
+
+    <section class="rule" id="one-new-card">
+      <div class="rule-body">
+        <h3>The "You Have One New Card" Rule</h3>
+        <p>Players must keep the game moving quickly — much faster than a standard game of Magic. Use the time between your turns to plan your strategies so play doesn't stall when your turn arrives.</p>
+      </div>
+      <details class="drawer">
+        <summary>FAQ <span class="chevron">▼</span></summary>
+        <div class="drawer-content">
+          <div class="faq-item">
+            <span class="faq-q">Is there a time limit per turn?</span>
+            <span class="faq-a">No hard limit — but the spirit of the rule is to keep things moving. If someone is consistently slow, the table should remind them.</span>
+          </div>
+        </div>
+      </details>
+    </section>
+
+    <section class="rule" id="placeholder-1">
+      <div class="rule-body">
+        <h3>Placeholder Rule</h3>
+        <p>Placeholder — add rule here.</p>
+      </div>
+      <details class="drawer">
+        <summary>FAQ <span class="chevron">▼</span></summary>
+        <div class="drawer-content">
+          <div class="faq-item">
+            <span class="faq-q">Sample question?</span>
+            <span class="faq-a">Sample answer.</span>
+          </div>
+        </div>
+      </details>
+    </section>
+
+    <section class="rule" id="placeholder-2">
+      <div class="rule-body">
+        <h3>Placeholder Rule</h3>
+        <p>Placeholder — add rule here.</p>
+      </div>
+      <details class="drawer">
+        <summary>FAQ <span class="chevron">▼</span></summary>
+        <div class="drawer-content">
+          <div class="faq-item">
+            <span class="faq-q">Sample question?</span>
+            <span class="faq-a">Sample answer.</span>
+          </div>
+        </div>
+      </details>
+    </section>
+
+    <section class="rule" id="placeholder-3">
+      <div class="rule-body">
+        <h3>Placeholder Rule</h3>
+        <p>Placeholder — add rule here.</p>
+      </div>
+      <details class="drawer">
+        <summary>FAQ <span class="chevron">▼</span></summary>
+        <div class="drawer-content">
+          <div class="faq-item">
+            <span class="faq-q">Sample question?</span>
+            <span class="faq-a">Sample answer.</span>
+          </div>
+        </div>
+      </details>
+    </section>
+
+    <section class="rule" id="placeholder-4">
+      <div class="rule-body">
+        <h3>Placeholder Rule</h3>
+        <p>Placeholder — add rule here.</p>
+      </div>
+      <details class="drawer">
+        <summary>FAQ <span class="chevron">▼</span></summary>
+        <div class="drawer-content">
+          <div class="faq-item">
+            <span class="faq-q">Sample question?</span>
+            <span class="faq-a">Sample answer.</span>
+          </div>
+        </div>
+      </details>
+    </section>
+
+    <div class="section-header"><h2>Pack Wars Etiquette</h2></div>
+
+    <section class="rule" id="simple-1">
+      <div class="rule-body">
+        <h3>Placeholder Rule</h3>
+        <p>Placeholder — add rule here.</p>
+      </div>
+    </section>
+
+    <section class="rule" id="simple-2">
+      <div class="rule-body">
+        <h3>Placeholder Rule</h3>
+        <p>Placeholder — add rule here.</p>
+      </div>
+    </section>
+
+    <section class="rule" id="simple-3">
+      <div class="rule-body">
+        <h3>Placeholder Rule</h3>
+        <p>Placeholder — add rule here.</p>
+      </div>
+    </section>
+
+    <section class="rule" id="simple-4">
+      <div class="rule-body">
+        <h3>Placeholder Rule</h3>
+        <p>Placeholder — add rule here.</p>
+      </div>
+    </section>
+
+    <section class="rule" id="simple-5">
+      <div class="rule-body">
+        <h3>Placeholder Rule</h3>
+        <p>Placeholder — add rule here.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    Pack Wars &mdash; Custom MTG Format &mdash; Official Rules
+  </footer>
+
+  <script>
+    function setHeaderHeight() {
+      const h = document.querySelector('header').offsetHeight;
+      document.documentElement.style.setProperty('--header-height', h + 'px');
+    }
+    setHeaderHeight();
+    window.addEventListener('resize', setHeaderHeight);
+  </script>
+</body>
+</html>
