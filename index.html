@@ -4,6 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pack Wars — Official Rules</title>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-L46V23F034"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-L46V23F034');
+  </script>
+
   <style>
     :root {
       --bg: #f0f0f0;
@@ -105,7 +116,7 @@
     main {
       max-width: 700px;
       margin: 0 auto;
-      padding: 1rem 0.75rem 2rem;
+      padding: 0.5rem 0.75rem 2rem;
     }
 
     /* Rule card */
@@ -153,7 +164,7 @@
       content: '';
       position: absolute;
       left: 0.15rem;
-      top: 0.55em;
+      top: 0.85em;
       width: 0.5rem;
       height: 0.5rem;
       background: var(--blue-dim);
@@ -273,6 +284,10 @@
       padding: 0.5rem 0.9rem;
     }
 
+    .section-header:first-child {
+      margin-top: 0;
+    }
+
     .section-header h2 {
       font-size: 1rem;
       font-weight: 700;
@@ -311,21 +326,20 @@
     <div class="section-header"><h2>Overview</h2></div>
 
     <div class="overview">
-      <p>Packwars is the fun and fast Magic The Gathering multiplayer limited format you have been looking for. There are many different versions of Packwars out there, but this combination of rules makes it <b>The One True Frormat</b></p>
-      </br>
+      <p>Pack Wars is the fun and fast Magic: The Gathering multiplayer limited format you have been looking for. There are many different versions of Pack Wars out there, but this combination of rules makes it <b>The One True Format.</b></p>
       <p>The game is designed to be multiplayer and plays best with 4 players, but more or less works fine. Grab some friends and start cracking those packs!</p>
     </div>
 
     <div class="section-header"><h2>Setup</h2></div>
 
-    <section class="rule" id="pack-selection">
+    <section class="rule" id="setup">
       <div class="rule-body">
         <h3></h3>
         <ul>
           <li>Each player opens two packs of Magic the Gathering cards, <b>and while doing their best to not look at the pack contents</b>, removes any tokens and the basic land if you are confident, and shuffles them together.</li>
-          <li>Players determine who goes first and draw hands of 7 cards and play begins just like any multiplayer game of Magic, except with all the rules following this!</li>
-          <li><b>There are no mulligans in Packwars.</b></li>
-          <li>The Golden Rule: Packwars is a fan created format, that while harnesses the latent engery of each pack of Magic cards, not every possible scenario and corner case has been though of. If there is an interaction the rules below do not cover, follow the standard rules of magic as closely as possible, and if that doesn't work, house rule something in.  </li>
+          <li>Players determine who goes first and draw hands of 7 cards, and play begins just like any multiplayer game of Magic, except with all the rules following this!</li>
+          <li><b>There are no mulligans in Pack Wars.</b></li>
+          <li>The Golden Rule: Pack Wars is a fan-created format. While it harnesses the latent energy of each pack of Magic cards, not every possible scenario and corner case has been thought of. If there is an interaction the rules below do not cover, follow the standard rules of Magic as closely as possible, and if that doesn't work, house rule something in.</li>
         </ul>
       </div>
       <details class="drawer">
@@ -333,19 +347,19 @@
         <div class="drawer-content">
           <div class="faq-item">
             <span class="faq-q">What packs do we use? Do they have to all be the same?</span>
-            <span class="faq-a">The standard is having all players use packs from the same set, or at least the same combination of packs like 1 Return To Ravnice and 1 Gatecrash. There is nothing stoping you from doing Chaos Packwars as long as all players agree.</span>
+            <span class="faq-a">The standard is having all players use packs from the same set, or at least the same combination of packs like 1 Return To Ravnica and 1 Gatecrash. There is nothing stopping you from doing Chaos Pack Wars as long as all players agree.</span>
           </div>
            <div class="faq-item">
             <span class="faq-q">Wait so you say to start playing normal magic, but then there are a bunch of overriding rules? What gives?</span>
-            <span class="faq-a">Packwars is designed to leverage the fantastic rule set we all know as much as possible. Unless the there is a rule mentioned here, play it like you would using the normal Magic The Gather rules. </span>
+            <span class="faq-a">Pack Wars is designed to leverage the fantastic rule set we all know as much as possible. Unless there is a rule mentioned here, play it like you would using the normal Magic: The Gathering rules.</span>
           </div>
           <div class="faq-item">
             <span class="faq-q">Why shouldn't we look at the pack contents?</span>
-            <span class="faq-a">Two main reasons. First is fun! this makes every single card draw a mini pack crack, you don't know whats going to come up next. Second is speed. Players will want to investigate their packs for both carnal interest as well as knowing what to expect from their deck. Thats Lame. </span>
+            <span class="faq-a">Two main reasons. First is fun! This makes every single card draw a mini pack crack, you don't know whats going to come up next. Second is speed. Players will want to investigate their packs for both carnal interest as well as knowing what to expect from their deck. Thats Lame. </span>
           </div>
           <div class="faq-item">
             <span class="faq-q">Dude, there are no lands in this deck.</span>
-            <span class="faq-a">Correct! Thats covered in our first Packwars rule below!</span>
+            <span class="faq-a">Correct! That's covered in our first Pack Wars rule below!</span>
           </div>
         </div>
       </details>
@@ -353,12 +367,12 @@
 
     <div class="section-header"><h2>Lands</h2></div>
 
-    <section class="rule" id="land-drops">
+    <section class="rule" id="lands">
       <div class="rule-body">
         <h3></h3>
         <ul>
           <li>On each player's turn they may select 1 card in their hand and <b>Super Exile</b> it to get the basic land of their choice.</li>
-          <li>Super Exiled cards are fully removed from game and can't be interacted with. Place them in a different pile than standard exile.</li>
+          <li>Super Exiled cards are fully removed from the game and can't be interacted with. Place them in a different pile than standard exile.</li>
           <li>Players with additional land drops (like Explore) get the same number of Super Exiles. They do not have to use all of them.</li>
           <li>Basic Lands are Plains, Island, Swamp, Mountain and Forest. Sorry Wastes, that's too much overhead!</li>
           <li>Players can choose to keep any basic land(s) they get from Super Exiles in their hands if they wish. (Akin to drawing but not playing it.)</li>
@@ -369,19 +383,19 @@
         <div class="drawer-content">
           <div class="faq-item">
             <span class="faq-q">What if my pack contains a non-basic land?</span>
-            <span class="faq-a">It plays normally. Maybe it helps you or maybe you super exile it for the color you want</span>
+            <span class="faq-a">It plays normally. Maybe it helps you or maybe you Super Exile it for the color you want.</span>
           </div>
           <div class="faq-item">
             <span class="faq-q">What if my pack contained a basic land?</span>
-            <span class="faq-a">If at anytime a player draws a basic land, they can immediately "Discard" it and draw another card OR use that basic as is OR super-exile it like any other card. Magic packs have gone through many iterations on the basic slot and trying to safely remove them isn't always doable or they are shared with non-basics. This is the easiest way to not worry about it.</span>
+            <span class="faq-a">If at any time a player draws a basic land, they can immediately "Discard" it and draw another card OR use that basic as is OR Super Exile it like any other card. Magic packs have gone through many iterations on the basic slot and trying to safely remove them isn't always doable or they are shared with non-basics. This is the easiest way to not worry about it.</span>
           </div>
            <div class="faq-item">
             <span class="faq-q">Why did you do Wastes dirty like that?</span>
-            <span class="faq-a">No one wants to carry around a giant stack of wastes. Also any set where colorless mana is important normally supports it with ample nonbasics and other effects. If you and your friends are somehow all in on Oath of the Gatewatch packwars, then house rule it in if all players agree.</span>
+            <span class="faq-a">No one wants to carry around a giant stack of Wastes. Also any set where colorless mana is important normally supports it with ample nonbasics and other effects. If you and your friends are somehow all in on Oath of the Gatewatch Pack Wars, then house rule it in if all players agree.</span>
           </div>
           <div class="faq-item">
             <span class="faq-q">Where do these basic lands come from?</span>
-            <span class="faq-a">Any seasoned packwars playgroup will have stacks of basic lands they know to bring and just put in the middle of the table for all to share.</span>
+            <span class="faq-a">Any seasoned Pack Wars playgroup will have stacks of basic lands they know to bring and just put in the middle of the table for all to share.</span>
           </div>
         </div>
       </details>
@@ -392,55 +406,62 @@
     <section class="rule" id="attack-left">
       <div class="rule-body">
         <h3>Attack Left</h3>
-        <p>Players may only declare attacks towards the player to their left. In addition creatures can only be declared as attacking the player to their left.</p>
+        <ul>
+          <li>Players may only declare attacks towards the player to their left. In addition, creatures can only be declared as attacking the player to their left.</li>
+        </ul>
       </div>
       <details class="drawer">
         <summary>FAQ <span class="chevron">▼</span></summary>
         <div class="drawer-content">
           <div class="faq-item">
             <span class="faq-q">Why?</span>
-            <span class="faq-a">The corner stone rule of The One True Format. It speeds up gameplay, makes attacking vs defending more interesting and removes unnecessary politics. The easiest Point you are going to score is most likely sitting to your left.</span>
+            <span class="faq-a">The cornerstone rule of The One True Format. It speeds up gameplay, makes attacking vs defending more interesting and removes unnecessary politics. The easiest Point you are going to score is most likely sitting to your left.</span>
           </div>
           <div class="faq-item">
             <span class="faq-q">What about Myriad?</span>
-            <span class="faq-a">The second sentence was created for this silly ability. The additional creatures enter and can attack the player to the left. This is equivelent to all other players having a the Blazing Archon effect. Note how Myriad works with the Local Zone rule.</span>
+            <span class="faq-a">The second sentence was created for this silly ability. The additional creatures enter and can attack the player to the left. This is equivalent to all other players having the Blazing Archon effect. Note how Myriad works with the Local Zone rule.</span>
           </div>
         </div>
       </details>
     </section>
 
-    <section class="rule" id="global-effects">
+    <section class="rule" id="global-effects-and-local-zone">
       <div class="rule-body">
         <h3>Global Effects and Local Zone</h3>
-        <p>Any effect that uses the words "any", "all", "each" or similar broad language to describe what it affects, instead only affects you and the players immediately to your left and right. This is your <b>Local Zone</b></p>
-        <p>Classic Examples: Destroy all creatures. Each Opponent Loses 2 Life. Any player who draws a card must pay 1 or do 10 pushups, etc</p>
+        <ul>
+          <li>Any effect that uses the words "any", "all", "each" or similar broad language to describe what it affects, instead only affects you and the players immediately to your left and right. This is your <b>Local Zone.</b></li>
+          <li>Classic Examples: Destroy all creatures. Each Opponent Loses 2 Life. Any player who draws a card must pay 1 or do 10 pushups, etc.</li>
+          <li>Effects that also cause players to Win or Lose the game directly are affected by Local Zone. If you win the game, the two players next to you lose the game, etc.</li>
+        </ul>
       </div>
       <details class="drawer">
         <summary>FAQ <span class="chevron">▼</span></summary>
         <div class="drawer-content">
           <div class="faq-item">
             <span class="faq-q">Why is this necessary?</span>
-            <span class="faq-a">Wrath effects are rare in limited, but are game stalling when it resets the entire game. This makes deploying global effects more strageic in 4+ player games</span>
+            <span class="faq-a">Wrath effects are rare in limited, but are game stalling when they reset the entire game. This makes deploying global effects more strategic in 4+ player games.</span>
           </div>
           <div class="faq-item">
             <span class="faq-q">But my pick splashy rare I just drew was going to instantly win me the game!</span>
-            <span class="faq-a">Precisely. This makes things more interesting while also reigning in Blood Artist and Extort mechanics</span>
+            <span class="faq-a">Precisely. This makes things more interesting while also reining in Blood Artist and Extort mechanics.</span>
           </div>
         </div>
       </details>
     </section>
 
-    <section class="rule" id="go-with-it">
+    <section class="rule" id="target-works-normally">
       <div class="rule-body">
         <h3>Target Works Normally</h3>
-        <p>Any card or ability using the word Target in its text opperate completely normally. You can cast lightning bolt targeting any creature or player at the table.</p>
+        <ul>
+          <li>Any card or ability using the word Target in its text operates completely normally. You can cast lightning bolt targeting any creature or player at the table.</li>
+        </ul>
       </div>
       <details class="drawer">
         <summary>FAQ <span class="chevron">▼</span></summary>
         <div class="drawer-content">
           <div class="faq-item">
             <span class="faq-q">Does this rule need an FAQ?</span>
-            <span class="faq-a">No, its literally normal Magic</span>
+            <span class="faq-a">No, it's literally normal Magic.</span>
           </div>
         </div>
       </details>
@@ -448,27 +469,33 @@
 
     <div class="section-header"><h2>Winning</h2></div>
 
-    <section class="rule" id="priority">
+    <section class="rule" id="winning">
       <div class="rule-body">
         <h3></h3>
-        <p>Packwars is scored on a Points system. When 1 or 0 players remain, whoever has the most points wins!</p>
-        <p>Players receive 1 point for having the effect or damage that eliminated a player. Including themselves!</p>
-        <p>If 1 player remains at the end of the game, they receive 1 Point.</p>
-        <p><b>There is no conceding in Packwars.</b></p>
+        <ul>
+          <li>Pack Wars is scored on a Points system. When 1 or 0 players remain, whoever has the most points wins!</li>
+          <li>Players receive 1 point for having the effect or damage that eliminated a player. Including themselves!</li>
+          <li>If 1 player remains at the end of the game, they receive 1 Point.</li>
+          <li><b>There is no conceding in Pack Wars.</b></li>
+        </ul>
       </div>
       <details class="drawer">
         <summary>FAQ <span class="chevron">▼</span></summary>
         <div class="drawer-content">
           <div class="faq-item">
             <span class="faq-q">What if two or more players tie on points?</span>
-            <span class="faq-a">The player who survived the longest wins the tie, if that is still tied, the player who started the latest in the turn order wins</span>
+            <span class="faq-a">The player who survived the longest wins the tie. If that is still tied, the player who started latest in the turn order wins.</span>
           </div>
           <div class="faq-item">
             <span class="faq-q">Wait what? I can get a point for killing myself?</span>
-            <span class="faq-a">Yes. The Point has to go to someone. Also, one of the great discoveries in over a century of development on Packwars, is that this rule creates a fun and interesting dynamic. The big hindge is that players cannot concede, and salting out of a game of packwars is considered highly uncuth.</span>
+            <span class="faq-a">Yes. The Point has to go to someone. Also, one of the great discoveries in over a century of development on Pack Wars, is that this rule creates a fun and interesting dynamic. The big hinge is that players cannot concede, and salting out of a game of Pack Wars is considered highly uncouth.</span>
           </div>
           <div class="faq-item">
-            <span class="faq-q">But what if a player has to abandon the game for very real reason?</span>
+            <span class="faq-q">What if a player dies to drawing a card on an empty library?</span>
+            <span class="faq-a">That player gets the point. Milling out opponents is a very risky strategy in Pack Wars unless you have an effect you control that makes them draw cards.</span>
+          </div>
+          <div class="faq-item">
+            <span class="faq-q">But what if a player has to abandon the game for a very real reason?</span>
             <span class="faq-a">Real Life Happens. In this unfortunate event, a "Ghost Player" remains with that player's last life total. It has no board, no hand, no library, cannot draw cards, but can be attacked and targeted like a normal player.</span>
           </div>
         </div>
@@ -477,161 +504,130 @@
 
     <div class="section-header"><h2>Other Core Rules</h2></div>
 
-    <section class="rule" id="one-new-card">
+    <section class="rule" id="rampant-growth-effects">
       <div class="rule-body">
         <h3>Rampant Growth Effects</h3>
-        <p>Any card that lets a player search their library for a basic land (or a named basic land like "Forest") instead they name the basic they want and super exiles the bottom card of their library instead of searching and gets that land</p>
-        <p>If the card searches for any land, the player may use the rule above or play the rule as it would in normal magic. If they can't find lands that match the requirments they fail to find. Should of just done option 1.</p>
+        <ul>
+          <li>For any card that lets a player search their library for a basic land (or a named basic land like "Forest"), instead they name the basic they want, Super Exile the bottom card of their library, and get that land.</li>
+          <li>If the card searches for any land, the player may use the rule above or play the rule as it would in normal Magic. If they can't find lands that match the requirements, they fail to find. Should've just done option 1.</li>
+        </ul>
       </div>
       <details class="drawer">
         <summary>FAQ <span class="chevron">▼</span></summary>
         <div class="drawer-content">
           <div class="faq-item">
             <span class="faq-q">Why the no searching?</span>
-            <span class="faq-a">Limiting players looking through their deck is a hallmark of the format, and this solves it cleanly. In the event a player chooses to look through their deck with a card like Sylvan Scrying, they should also consider the etiquite rules below and not take 10 minutes to commit ever card in their deck to memory. Also you just could of saved 2 mana and super-exiled Sylvan Scrying for a land</span>
+            <span class="faq-a">Limiting players looking through their deck is a hallmark of the format, and this solves it cleanly. In the event a player chooses to look through their deck with a card like Sylvan Scrying, they should also consider the etiquette rules below and not take 10 minutes to commit every card in their deck to memory. Also you just could've saved 2 mana and Super Exiled Sylvan Scrying for a land.</span>
           </div>
         </div>
       </details>
     </section>
 
-    <section class="rule" id="one-new-card">
+    <section class="rule" id="mulch-grind-effects">
       <div class="rule-body">
-        <h3>Mulch Effects</h3>
-        <p>Any card that lets a player search their library for a basic land (or a named basic land like "Forest") instead they name the basic they want and super exiles the bottom card of their library instead of searching and gets that land</p>
-        <p>If the card searches for any land, the player may use the rule above or play the rule as it would in normal magic. If they can't find lands that match the requirments they fail to find. Should of just done option 1.</p>
+        <h3>Mulch / Grind Effects</h3>
+        <ul>
+          <li>Any effect that <b>reveals</b> or has you <b>look</b> at cards from the top of your library and <b>explicitly looks for a land</b>, you may choose the first card revealed to be Super Exiled into a land, do this before looking at it.</li>
+          <li>If you choose not to Super Exile the first card, the card works as written.</li>
+        </ul>
       </div>
       <details class="drawer">
         <summary>FAQ <span class="chevron">▼</span></summary>
         <div class="drawer-content">
           <div class="faq-item">
-            <span class="faq-q">Why the no searching?</span>
-            <span class="faq-a">Limiting players looking through their deck is a hallmark of the format, and this solves it cleanly. In the event a player chooses to look through their deck with a card like Sylvan Scrying, they should also consider the etiquite rules below and not take 10 minutes to commit ever card in their deck to memory. Also you just could of saved 2 mana and super-exiled Sylvan Scrying for a land</span>
+            <span class="faq-q">What if I reveal or look before calling the Super Exile for land?</span>
+            <span class="faq-a">Tough Luck. Remember to choose before touching the top of your library.</span>
+          </div>
+          <div class="faq-item">
+            <span class="faq-q">Does the Explore mechanic work with this?</span>
+            <span class="faq-a">Yes, it reveals and has to deal with a land. If those two are true, use this rule.</span>
+          </div>
+          <div class="faq-item">
+            <span class="faq-q">What about cards like Future Sight?</span>
+            <span class="faq-a">Reveal Yes. Land Specific No. This plays as written.</span>
+          </div>
+          <div class="faq-item">
+            <span class="faq-q">Why are Grind effects (Balustrade Spy) included?</span>
+            <span class="faq-a">The player whose library is affected decides whether the top card is a land. This is to prevent unnecessary mill-out effects from these cards. It also reveals and looks for a land!</span>
           </div>
         </div>
       </details>
     </section>
 
-    <section class="rule" id="one-new-card">
+    <section class="rule" id="oracle-of-mul-daya-effects">
       <div class="rule-body">
-        <h3>The "You Have One New Card" Rule</h3>
-        <p>Players must keep the game moving quickly — much faster than a standard game of Magic. Use the time between your turns to plan your strategies so play doesn't stall when your turn arrives.</p>
+        <h3>Oracle of Mul Daya Effects</h3>
+        <ul>
+          <li>This is similar to and in addition to the Mulch rule above. If you have concurrent effects that reveal/look the top card of your library AND let you play lands from the top of your library: Before each reveal/look you must choose if it is a land (and which one) and Super Exile that card, the land replaces it.</li>
+        </ul>
       </div>
       <details class="drawer">
         <summary>FAQ <span class="chevron">▼</span></summary>
         <div class="drawer-content">
           <div class="faq-item">
-            <span class="faq-q">Is there a time limit per turn?</span>
-            <span class="faq-a">No hard limit — but the spirit of the rule is to keep things moving. If someone is consistently slow, the table should remind them.</span>
+            <span class="faq-q">But! But! If it's a look card, my opponents will know what's on top of my library because I had to Super Exile for a basic?</span>
+            <span class="faq-a">Calm Down. You are most likely playing that land anyway for your land drop.</span>
+          </div>
+           <div class="faq-item">
+            <span class="faq-q">For cards that always reveal or let you look at the top of your library, I have to remember to always be calling the Super Exile for land before?</span>
+            <span class="faq-a">Yes.</span>
           </div>
         </div>
       </details>
     </section>
 
-    <section class="rule" id="placeholder-1">
-      <div class="rule-body">
-        <h3>Placeholder Rule</h3>
-        <p>Placeholder — add rule here.</p>
-      </div>
-      <details class="drawer">
-        <summary>FAQ <span class="chevron">▼</span></summary>
-        <div class="drawer-content">
-          <div class="faq-item">
-            <span class="faq-q">Sample question?</span>
-            <span class="faq-a">Sample answer.</span>
-          </div>
-        </div>
-      </details>
-    </section>
-
-    <section class="rule" id="placeholder-2">
-      <div class="rule-body">
-        <h3>Placeholder Rule</h3>
-        <p>Placeholder — add rule here.</p>
-      </div>
-      <details class="drawer">
-        <summary>FAQ <span class="chevron">▼</span></summary>
-        <div class="drawer-content">
-          <div class="faq-item">
-            <span class="faq-q">Sample question?</span>
-            <span class="faq-a">Sample answer.</span>
-          </div>
-        </div>
-      </details>
-    </section>
-
-    <section class="rule" id="placeholder-3">
-      <div class="rule-body">
-        <h3>Placeholder Rule</h3>
-        <p>Placeholder — add rule here.</p>
-      </div>
-      <details class="drawer">
-        <summary>FAQ <span class="chevron">▼</span></summary>
-        <div class="drawer-content">
-          <div class="faq-item">
-            <span class="faq-q">Sample question?</span>
-            <span class="faq-a">Sample answer.</span>
-          </div>
-        </div>
-      </details>
-    </section>
-
-    <section class="rule" id="placeholder-4">
-      <div class="rule-body">
-        <h3>Placeholder Rule</h3>
-        <p>Placeholder — add rule here.</p>
-      </div>
-      <details class="drawer">
-        <summary>FAQ <span class="chevron">▼</span></summary>
-        <div class="drawer-content">
-          <div class="faq-item">
-            <span class="faq-q">Sample question?</span>
-            <span class="faq-a">Sample answer.</span>
-          </div>
-        </div>
-      </details>
-    </section>
-
+    <!--
     <div class="section-header"><h2>Pack Wars Etiquette</h2></div>
 
     <section class="rule" id="simple-1">
       <div class="rule-body">
         <h3>Placeholder Rule</h3>
-        <p>Placeholder — add rule here.</p>
+        <ul>
+          <li>Placeholder — add rule here.</li>
+        </ul>
       </div>
     </section>
 
     <section class="rule" id="simple-2">
       <div class="rule-body">
         <h3>Placeholder Rule</h3>
-        <p>Placeholder — add rule here.</p>
+        <ul>
+          <li>Placeholder — add rule here.</li>
+        </ul>
       </div>
     </section>
 
     <section class="rule" id="simple-3">
       <div class="rule-body">
         <h3>Placeholder Rule</h3>
-        <p>Placeholder — add rule here.</p>
+        <ul>
+          <li>Placeholder — add rule here.</li>
+        </ul>
       </div>
     </section>
 
     <section class="rule" id="simple-4">
       <div class="rule-body">
         <h3>Placeholder Rule</h3>
-        <p>Placeholder — add rule here.</p>
+        <ul>
+          <li>Placeholder — add rule here.</li>
+        </ul>
       </div>
     </section>
 
     <section class="rule" id="simple-5">
       <div class="rule-body">
         <h3>Placeholder Rule</h3>
-        <p>Placeholder — add rule here.</p>
+        <ul>
+          <li>Placeholder — add rule here.</li>
+        </ul>
       </div>
     </section>
-
+  -->
   </main>
 
   <footer>
-    Packjwars and mtgpackwars.com contains unofficial Fan Content permitted under the Fan Content Policy. Not approved/endorsed by Wizards. Portions of the materials used are property of Wizards of the Coast. &copy;Wizards of the Coast LLC.
+    Pack Wars and mtgpackwars.com contains unofficial Fan Content permitted under the Fan Content Policy. Not approved/endorsed by Wizards. Portions of the materials used are property of Wizards of the Coast. &copy;Wizards of the Coast LLC.
   </footer>
 
   <script>
