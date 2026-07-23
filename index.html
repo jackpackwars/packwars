@@ -113,6 +113,24 @@
       margin-left: 0.5rem;
     }
 
+    header .reddit-link {
+      margin-left: auto;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--blue);
+      text-decoration: none;
+      padding: 0.35rem 0.75rem;
+      border: 1px solid var(--blue-dim);
+      border-radius: 20px;
+      white-space: nowrap;
+      transition: background 0.15s, color 0.15s;
+    }
+
+    header .reddit-link:hover {
+      background: var(--blue);
+      color: #fff;
+    }
+
     main {
       max-width: 700px;
       margin: 0 auto;
@@ -319,6 +337,7 @@
   <header>
     <img src="logo.png" alt="Pack Wars" class="logo">
     <span class="tagline">The One True Format</span>
+    <a class="reddit-link" href="https://old.reddit.com/r/mtgpackwars/" target="_blank" rel="noopener">Questions and Discussion</a>
   </header>
 
   <main>
@@ -497,6 +516,10 @@
           <div class="faq-item">
             <span class="faq-q">But what if a player has to abandon the game for a very real reason?</span>
             <span class="faq-a">Real Life Happens. In this unfortunate event, a "Ghost Player" remains with that player's last life total. It has no board, no hand, no library, cannot draw cards, but can be attacked and targeted like a normal player.</span>
+          </div>
+          <div class="faq-item">
+            <span class="faq-q">What about tournaments or prize support?</span>
+            <span class="faq-a">The point system lends itself to this well! Total Points can be used for pairings and prize support can be as simple as 1 Pack per Point taken</span>
           </div>
         </div>
       </details>
